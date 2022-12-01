@@ -1,0 +1,766 @@
+﻿<Window x:Class="Chess.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chess"
+        xmlns:viewModels="clr-namespace:ChessEngine.ViewModels;assembly=ChessEngine"
+        d:DataContext="{d:DesignInstance viewModels:CurrentGame}"
+        mc:Ignorable="d"
+        Title="Chess" Height="720" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="640"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="640"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Background="Silver"></Label>
+        <Label Grid.Row="0" Grid.Column="1" Background="Silver"></Label>
+        <Label Grid.Row="0" Grid.Column="2" Background="Silver"></Label>
+
+        <Label Grid.Row="1" Grid.Column="0" Background="Silver"></Label>
+        <UniformGrid x:Name="Board" Grid.Row="1" Grid.Column="1" Rows="8" Columns="8" Margin="0">
+            
+            <!--First Row-->
+            <Grid>
+                <Image Source="{Binding Board[0][0].SquareImage}"/>
+                <Button Name="c00" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[0][0].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[0][1].SquareImage}"/>
+                <Button Name="c01" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[0][1].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[0][2].SquareImage}"/>
+                <Button Name="c02" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[0][2].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[0][3].SquareImage}"/>
+                <Button Name="c03" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[0][3].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[0][4].SquareImage}"/>
+                <Button Name="c04" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[0][4].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[0][5].SquareImage}"/>
+                <Button Name="c05" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[0][5].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[0][6].SquareImage}"/>
+                <Button Name="c06" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[0][6].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[0][7].SquareImage}"/>
+                <Button Name="c07" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[0][7].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+            
+            <!--Second Row-->
+            <Grid>
+                <Image Source="{Binding Board[1][0].SquareImage}"/>
+                <Button Name="c10" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[1][0].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[1][1].SquareImage}"/>
+                <Button Name="c11" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[1][1].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[1][2].SquareImage}"/>
+                <Button Name="c12" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[1][2].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[1][3].SquareImage}"/>
+                <Button Name="c13" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[1][3].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[1][4].SquareImage}"/>
+                <Button Name="c14" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[1][4].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[1][5].SquareImage}"/>
+                <Button Name="c15" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[1][5].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[1][6].SquareImage}"/>
+                <Button Name="c16" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[1][6].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[1][7].SquareImage}"/>
+                <Button Name="c17" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[1][7].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <!--Third Row-->
+            <Grid>
+                <Image Source="{Binding Board[2][0].SquareImage}"/>
+                <Button Name="c20" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[2][0].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[2][1].SquareImage}"/>
+                <Button Name="c21" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[2][1].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[2][2].SquareImage}"/>
+                <Button Name="c22" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[2][2].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[2][3].SquareImage}"/>
+                <Button Name="c23" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[2][3].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[2][4].SquareImage}"/>
+                <Button Name="c24" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[2][4].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[2][5].SquareImage}"/>
+                <Button Name="c25" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[2][5].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[2][6].SquareImage}"/>
+                <Button Name="c26" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[2][6].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[2][7].SquareImage}"/>
+                <Button Name="c27" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[2][7].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <!--Fourth Row-->
+            <Grid>
+                <Image Source="{Binding Board[3][0].SquareImage}"/>
+                <Button Name="c30" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[3][0].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[3][1].SquareImage}"/>
+                <Button Name="c31" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[3][1].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[3][2].SquareImage}"/>
+                <Button Name="c32" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[3][2].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[3][3].SquareImage}"/>
+                <Button Name="c33" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[3][3].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[3][4].SquareImage}"/>
+                <Button Name="c34" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[3][4].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[3][5].SquareImage}"/>
+                <Button Name="c35" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[3][5].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[3][6].SquareImage}"/>
+                <Button Name="c36" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[3][6].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[3][7].SquareImage}"/>
+                <Button Name="c37" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[3][7].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <!--Fifth Row-->
+            <Grid>
+                <Image Source="{Binding Board[4][0].SquareImage}"/>
+                <Button Name="c40" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[4][0].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[4][1].SquareImage}"/>
+                <Button Name="c41" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[4][1].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[4][2].SquareImage}"/>
+                <Button Name="c42" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[4][2].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[4][3].SquareImage}"/>
+                <Button Name="c43" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[4][3].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[4][4].SquareImage}"/>
+                <Button Name="c44" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[4][4].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[4][5].SquareImage}"/>
+                <Button Name="c45" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[4][5].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[4][6].SquareImage}"/>
+                <Button Name="c46" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[4][6].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[4][7].SquareImage}"/>
+                <Button Name="c47" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[4][7].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <!--Sixth Row-->
+            <Grid>
+                <Image Source="{Binding Board[5][0].SquareImage}"/>
+                <Button Name="c50" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[5][0].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[5][1].SquareImage}"/>
+                <Button Name="c51" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[5][1].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[5][2].SquareImage}"/>
+                <Button Name="c52" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[5][2].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[5][3].SquareImage}"/>
+                <Button Name="c53" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[5][3].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[5][4].SquareImage}"/>
+                <Button Name="c54" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[5][4].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[5][5].SquareImage}"/>
+                <Button Name="c55" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[5][5].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[5][6].SquareImage}"/>
+                <Button Name="c56" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[5][6].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[5][7].SquareImage}"/>
+                <Button Name="c57" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[5][7].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <!--Seventh Row-->
+            <Grid>
+                <Image Source="{Binding Board[6][0].SquareImage}"/>
+                <Button Name="c60" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[6][0].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[6][1].SquareImage}"/>
+                <Button Name="c61" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[6][1].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[6][2].SquareImage}"/>
+                <Button Name="c62" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[6][2].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[6][3].SquareImage}"/>
+                <Button Name="c63" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[6][3].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[6][4].SquareImage}"/>
+                <Button Name="c64" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[6][4].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[6][5].SquareImage}"/>
+                <Button Name="c65" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[6][5].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[6][6].SquareImage}"/>
+                <Button Name="c66" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[6][6].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[6][7].SquareImage}"/>
+                <Button Name="c67" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[6][7].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <!--Eigth Row-->
+            <Grid>
+                <Image Source="{Binding Board[7][0].SquareImage}"/>
+                <Button Name="c70" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[7][0].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[7][1].SquareImage}"/>
+                <Button Name="c71" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[7][1].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[7][2].SquareImage}"/>
+                <Button Name="c72" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[7][2].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[7][3].SquareImage}"/>
+                <Button Name="c73" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[7][3].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[7][4].SquareImage}"/>
+                <Button Name="c74" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[7][4].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[7][5].SquareImage}"/>
+                <Button Name="c75" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[7][5].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[7][6].SquareImage}"/>
+                <Button Name="c76" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[7][6].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Image Source="{Binding Board[7][7].SquareImage}"/>
+                <Button Name="c77" Height="80" Width="80" Click="ClickOnSquare">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Image Source="{Binding Board[7][7].SquarePiece.PieceImage}"/>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+            </Grid>
+
+        </UniformGrid>
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Background="Silver" Content="{Binding GameState}"/>
+            <Label Grid.Row="1" Grid.Column="0" Background="Silver" Content="Select promotion piece:"/>
+            <ComboBox Name="PromotionBox" Grid.Row="2" Grid.Column="0" SelectionChanged="HandlePromotion"/>
+            <Label Grid.Row="3" Grid.Column="0" Background="Silver"/>
+        </Grid>
+
+        <Label Grid.Row="2" Grid.Column="0" Background="Silver"></Label>
+        <Label Grid.Row="2" Grid.Column="1" Background="Silver"></Label>
+        <Label Grid.Row="2" Grid.Column="2" Background="Silver"></Label>
+    </Grid>
+</Window>

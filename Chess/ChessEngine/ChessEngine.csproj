@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DBFB0F51-C370-4C71-B9F5-FC6C0F85680E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChessEngine</RootNamespace>
+    <AssemblyName>ChessEngine</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseNotificationClass.cs" />
+    <Compile Include="Models\Bishop.cs" />
+    <Compile Include="Models\BoardSquare.cs" />
+    <Compile Include="Models\EmptyPiece.cs" />
+    <Compile Include="Models\King.cs" />
+    <Compile Include="Models\Knight.cs" />
+    <Compile Include="Models\LegalMoveGenerator.cs" />
+    <Compile Include="Models\Pawn.cs" />
+    <Compile Include="Models\Piece.cs" />
+    <Compile Include="Models\PieceColorEnum.cs" />
+    <Compile Include="Models\PieceTypeEnum.cs" />
+    <Compile Include="Models\PseudoLegalMoveGenerator.cs" />
+    <Compile Include="Models\Queen.cs" />
+    <Compile Include="Models\Rook.cs" />
+    <Compile Include="Models\SquareColorEnum.cs" />
+    <Compile Include="MoveDecoder.cs" />
+    <Compile Include="MoveEncoder.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CurrentGame.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BlackBishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BlackKing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BlackKingChecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BlackKnight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BlackPawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BlackQueen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BlackRook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DarkSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DarkSquareHighlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DarkSquareLastMove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\LightSquare.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\LightSquareHighlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\LightSquareLastMove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WhiteBishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WhiteKing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WhiteKingChecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WhiteKnight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WhitePawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WhiteQueen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WhiteRook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Capture.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Move.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
