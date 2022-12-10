@@ -39,6 +39,11 @@ namespace Chess
             _currentGame.SelectSquare(x, y);
         }
 
+        private void NewGame(object sender, RoutedEventArgs e)
+        {
+            _currentGame.NewGame();
+        }
+
         private void CreatePromotionBox()
         {
             PromotionBox.Items.Add("Queen");

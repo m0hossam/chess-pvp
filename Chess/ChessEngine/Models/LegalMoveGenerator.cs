@@ -670,7 +670,7 @@ namespace ChessEngine.Models
             {
                 if (IsMoveLegal(Board, Color, KingX, KingY, Move, PseudoLegalMoves[Move]) == false)
                 {
-                    MovesToRemove.Add(Move, 1);
+                    if (!MovesToRemove.ContainsKey(Move)) { MovesToRemove.Add(Move, 1); }
                 }
             }
 
@@ -700,7 +700,7 @@ namespace ChessEngine.Models
                     bool IsSafe = IsSquareSafe(Color, OldX, OldY, NewX, NewY, Board);
                     if (IsSafe == false)
                     {
-                        MovesToRemove.Add(Move, 1);
+                        if (!MovesToRemove.ContainsKey(Move)) { MovesToRemove.Add(Move, 1); }
                     }
                 }   
                 else //Castling Move
@@ -712,7 +712,7 @@ namespace ChessEngine.Models
                             bool IsSafe = IsSquareSafe(Color, OldX, OldY, NewX, i, Board);
                             if (IsSafe == false)
                             {
-                                MovesToRemove.Add(Move, 1);
+                                if (!MovesToRemove.ContainsKey(Move)) { MovesToRemove.Add(Move, 1); }
                             }
                         }
                     }
@@ -723,7 +723,7 @@ namespace ChessEngine.Models
                             bool IsSafe = IsSquareSafe(Color, OldX, OldY, NewX, i, Board);
                             if (IsSafe == false)
                             {
-                                MovesToRemove.Add(Move, 1);
+                                if (!MovesToRemove.ContainsKey(Move)) { MovesToRemove.Add(Move, 1); }
                             }
                         }
                     }

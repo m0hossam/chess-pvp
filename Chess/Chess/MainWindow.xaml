@@ -747,6 +747,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -755,8 +756,9 @@
 
             <Label Grid.Row="0" Grid.Column="0" Background="Silver" Content="{Binding GameState}"/>
             <Label Grid.Row="1" Grid.Column="0" Background="Silver" Content="Select promotion piece:"/>
-            <ComboBox Name="PromotionBox" Grid.Row="2" Grid.Column="0" SelectionChanged="HandlePromotion"/>
-            <Label Grid.Row="3" Grid.Column="0" Background="Silver"/>
+            <ComboBox Grid.Row="2" Grid.Column="0" Name="PromotionBox" SelectionChanged="HandlePromotion"/>
+            <Button Grid.Row="3" Grid.Column="0" Height="40" Width="80" Content="New Game!" Click="NewGame"/>
+            <Label Grid.Row="4" Grid.Column="0" Background="Silver"/>
         </Grid>
 
         <Label Grid.Row="2" Grid.Column="0" Background="Silver"></Label>

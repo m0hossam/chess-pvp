@@ -57,7 +57,7 @@ namespace ChessEngine.ViewModels
             }
         }
 
-        public CurrentGame()
+        public void NewGame()
         {
             CreateBoard();
             GameState = "Game State: Ongoing";
@@ -66,6 +66,11 @@ namespace ChessEngine.ViewModels
             _currentSquare = null;
             _currentPiece = null;
             _currentTurn = 1;
+        }
+
+        public CurrentGame()
+        {
+            NewGame();
             _promotionPieceType = "Queen";
 
             System.IO.Stream stream = Properties.Resources.Move;
