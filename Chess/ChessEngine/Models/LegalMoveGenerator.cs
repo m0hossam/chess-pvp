@@ -369,7 +369,7 @@ namespace ChessEngine.Models
             for (int x = NewX - 1; x >= 0; x--) //Checking file upwards
             {
                 Piece Threat = Board[x][NewY].SquarePiece;
-                if (x == OldX && NewX == OldY) //Empty Square Due To Movement
+                if (x == OldX && NewY == OldY) //Empty Square Due To Movement
                 {
                     continue;
                 }
