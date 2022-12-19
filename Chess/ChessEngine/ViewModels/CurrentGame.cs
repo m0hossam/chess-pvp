@@ -79,7 +79,7 @@ namespace ChessEngine.ViewModels
             CaptureSound = new System.Media.SoundPlayer(stream);
         }
 
-        private Dictionary<string,string> GetAllPossibleMoves(PieceColorEnum Color)
+        private Dictionary<string, string> GetAllPossibleMoves(PieceColorEnum Color)
         {
             Dictionary<string, string> Moves = new Dictionary<string, string>();
             for (int i = 0; i < 8; i++)
@@ -108,7 +108,7 @@ namespace ChessEngine.ViewModels
 
         private void LastMoveHighlight(int x1, int y1, int x2, int y2)
         {
-            foreach(BoardSquare square in _lastMoveSquares)
+            foreach (BoardSquare square in _lastMoveSquares)
             {
                 square.OriginalSquare();
             }
@@ -169,7 +169,7 @@ namespace ChessEngine.ViewModels
                 case "EnPassant":
                     if (y1 > y2)
                     {
-                        Board[x1][y1-1].SquarePiece = new EmptyPiece(PieceColorEnum.Empty, PieceTypeEnum.Empty);
+                        Board[x1][y1 - 1].SquarePiece = new EmptyPiece(PieceColorEnum.Empty, PieceTypeEnum.Empty);
                     }
                     else
                     {

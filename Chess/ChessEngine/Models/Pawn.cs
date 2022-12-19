@@ -23,7 +23,7 @@ namespace ChessEngine.Models
             set { _enPassantTurn = value; }
         }
 
-        public Pawn(PieceColorEnum Color, PieceTypeEnum PieceType) : base(Color, PieceType)                
+        public Pawn(PieceColorEnum Color, PieceTypeEnum PieceType) : base(Color, PieceType)
         {
             _moved = false;
             _enPassantTurn = 0;
@@ -37,7 +37,7 @@ namespace ChessEngine.Models
             }
         }
 
-        public override Dictionary<string,string> GenerateLegalMoves(int Turn, int CurrentX, int CurrentY, ObservableCollection<ObservableCollection<BoardSquare>> Board)
+        public override Dictionary<string, string> GenerateLegalMoves(int Turn, int CurrentX, int CurrentY, ObservableCollection<ObservableCollection<BoardSquare>> Board)
         {
             Dictionary<string, string> Moves = new Dictionary<string, string>();
 
@@ -59,7 +59,7 @@ namespace ChessEngine.Models
             #region White Pawn
             if (_pieceColor == PieceColorEnum.White)
             {
-                if (Board[CurrentX-1][CurrentY].SquarePiece.PieceType == PieceTypeEnum.Empty) //up
+                if (Board[CurrentX - 1][CurrentY].SquarePiece.PieceType == PieceTypeEnum.Empty) //up
                 {
                     Moves.Add(MoveEncoder.EncodeMove(CurrentX, CurrentY, CurrentX - 1, CurrentY), MoveType);
                     if (_moved == false)
@@ -77,7 +77,7 @@ namespace ChessEngine.Models
                     {
                         Moves.Add(MoveEncoder.EncodeMove(CurrentX, CurrentY, CurrentX - 1, CurrentY - 1), MoveType);
                     }
-                    if (_moved == true 
+                    if (_moved == true
                         && Board[CurrentX][CurrentY - 1].SquarePiece.PieceType == PieceTypeEnum.Pawn
                         && Board[CurrentX][CurrentY - 1].SquarePiece.PieceColor != _pieceColor)
                     {
