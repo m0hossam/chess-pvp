@@ -9,8 +9,9 @@ namespace ChessEngine.Models
 {
     public class EmptyPiece : Piece
     {
-        public EmptyPiece(PieceColorEnum Color, PieceTypeEnum PieceType) : base(Color, PieceType)               
+        public EmptyPiece(PieceColorEnum Color) : base(Color)               
         {
+            _pieceType = PieceTypeEnum.Empty;
             _pieceColor = PieceColorEnum.Empty;
             PieceImage = "/ChessEngine;component/Resources/Empty.png";
         }

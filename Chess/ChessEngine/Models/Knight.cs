@@ -9,8 +9,9 @@ namespace ChessEngine.Models
 {
     public class Knight : Piece
     {
-        public Knight(PieceColorEnum Color, PieceTypeEnum PieceType) : base(Color, PieceType)                
+        public Knight(PieceColorEnum Color) : base(Color)                
         {
+            _pieceType = PieceTypeEnum.Knight;
             if (_pieceColor == PieceColorEnum.White)
             {
                 PieceImage = "/ChessEngine;component/Resources/WhiteKnight.png";

@@ -9,8 +9,9 @@ namespace ChessEngine.Models
 {
     public class Bishop : Piece
     {
-        public Bishop(PieceColorEnum Color, PieceTypeEnum PieceType) : base(Color, PieceType)
+        public Bishop(PieceColorEnum Color) : base(Color)
         {
+            _pieceType = PieceTypeEnum.Bishop;
             if (_pieceColor == PieceColorEnum.White)
             {
                 PieceImage = "/ChessEngine;component/Resources/WhiteBishop.png";

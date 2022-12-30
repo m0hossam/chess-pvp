@@ -23,8 +23,9 @@ namespace ChessEngine.Models
             set { _enPassantTurn = value; }
         }
 
-        public Pawn(PieceColorEnum Color, PieceTypeEnum PieceType) : base(Color, PieceType)
+        public Pawn(PieceColorEnum Color) : base(Color)
         {
+            _pieceType = PieceTypeEnum.Pawn;
             _moved = false;
             _enPassantTurn = 0;
             if (_pieceColor == PieceColorEnum.White)

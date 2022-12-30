@@ -50,57 +50,57 @@ namespace ChessEngine.Models
             {
                 if (Y == 0 || Y == 7)
                 {
-                    return new Rook(PieceColorEnum.Black, PieceTypeEnum.Rook);
+                    return new Rook(PieceColorEnum.Black);
                 }
                 if (Y == 1 || Y == 6)
                 {
-                    return new Knight(PieceColorEnum.Black, PieceTypeEnum.Knight);
+                    return new Knight(PieceColorEnum.Black);
                 }
                 if (Y == 2 || Y == 5)
                 {
-                    return new Bishop(PieceColorEnum.Black, PieceTypeEnum.Bishop);
+                    return new Bishop(PieceColorEnum.Black);
                 }
                 if (Y == 3)
                 {
-                    return new Queen(PieceColorEnum.Black, PieceTypeEnum.Queen);
+                    return new Queen(PieceColorEnum.Black);
                 }
                 if (Y == 4)
                 {
-                    return new King(PieceColorEnum.Black, PieceTypeEnum.King);
+                    return new King(PieceColorEnum.Black);
                 }
             }
             if (X == 1)
             {
-                return new Pawn(PieceColorEnum.Black, PieceTypeEnum.Pawn);
+                return new Pawn(PieceColorEnum.Black);
             }
             if (X == 6)
             {
-                return new Pawn(PieceColorEnum.White, PieceTypeEnum.Pawn);
+                return new Pawn(PieceColorEnum.White);
             }
             if (X == 7)
             {
                 if (Y == 0 || Y == 7)
                 {
-                    return new Rook(PieceColorEnum.White, PieceTypeEnum.Rook);
+                    return new Rook(PieceColorEnum.White);
                 }
                 if (Y == 1 || Y == 6)
                 {
-                    return new Knight(PieceColorEnum.White, PieceTypeEnum.Knight);
+                    return new Knight(PieceColorEnum.White);
                 }
                 if (Y == 2 || Y == 5)
                 {
-                    return new Bishop(PieceColorEnum.White, PieceTypeEnum.Bishop);
+                    return new Bishop(PieceColorEnum.White);
                 }
                 if (Y == 3)
                 {
-                    return new Queen(PieceColorEnum.White, PieceTypeEnum.Queen);
+                    return new Queen(PieceColorEnum.White);
                 }
                 if (Y == 4)
                 {
-                    return new King(PieceColorEnum.White, PieceTypeEnum.King);
+                    return new King(PieceColorEnum.White);
                 }
             }
-            return new EmptyPiece(PieceColorEnum.Empty, PieceTypeEnum.Empty);
+            return new EmptyPiece(PieceColorEnum.Empty);
         }
 
         public BoardSquare(int X, int Y)

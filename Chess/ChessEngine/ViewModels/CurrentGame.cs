@@ -142,7 +142,7 @@ namespace ChessEngine.ViewModels
             }
 
             Board[x2][y2].SquarePiece = Board[x1][y1].SquarePiece;
-            Board[x1][y1].SquarePiece = new EmptyPiece(PieceColorEnum.Empty, PieceTypeEnum.Empty);
+            Board[x1][y1].SquarePiece = new EmptyPiece(PieceColorEnum.Empty);
             switch (Type)
             {
                 case "Standard":
@@ -169,11 +169,11 @@ namespace ChessEngine.ViewModels
                 case "EnPassant":
                     if (y1 > y2)
                     {
-                        Board[x1][y1 - 1].SquarePiece = new EmptyPiece(PieceColorEnum.Empty, PieceTypeEnum.Empty);
+                        Board[x1][y1 - 1].SquarePiece = new EmptyPiece(PieceColorEnum.Empty);
                     }
                     else
                     {
-                        Board[x1][y1 + 1].SquarePiece = new EmptyPiece(PieceColorEnum.Empty, PieceTypeEnum.Empty);
+                        Board[x1][y1 + 1].SquarePiece = new EmptyPiece(PieceColorEnum.Empty);
                     }
                     break;
                 case "Castling":
@@ -184,14 +184,14 @@ namespace ChessEngine.ViewModels
                         var castlerook = (Rook)Board[x2][0].SquarePiece;
                         castlerook.Moved = true;
                         Board[x2][y2 + 1].SquarePiece = Board[x2][0].SquarePiece;
-                        Board[x2][0].SquarePiece = new EmptyPiece(PieceColorEnum.Empty, PieceTypeEnum.Empty);
+                        Board[x2][0].SquarePiece = new EmptyPiece(PieceColorEnum.Empty);
                     }
                     else
                     {
                         var castlerook = (Rook)Board[x2][7].SquarePiece;
                         castlerook.Moved = true;
                         Board[x2][y2 - 1].SquarePiece = Board[x2][7].SquarePiece;
-                        Board[x2][7].SquarePiece = new EmptyPiece(PieceColorEnum.Empty, PieceTypeEnum.Empty);
+                        Board[x2][7].SquarePiece = new EmptyPiece(PieceColorEnum.Empty);
                     }
                     break;
                 case "Promotion":
@@ -199,16 +199,16 @@ namespace ChessEngine.ViewModels
                     switch (_promotionPieceType)
                     {
                         case "Queen":
-                            Board[x2][y2].SquarePiece = new Queen(PromoColor, PieceTypeEnum.Queen);
+                            Board[x2][y2].SquarePiece = new Queen(PromoColor);
                             break;
                         case "Rook":
-                            Board[x2][y2].SquarePiece = new Rook(PromoColor, PieceTypeEnum.Rook);
+                            Board[x2][y2].SquarePiece = new Rook(PromoColor);
                             break;
                         case "Bishop":
-                            Board[x2][y2].SquarePiece = new Bishop(PromoColor, PieceTypeEnum.Bishop);
+                            Board[x2][y2].SquarePiece = new Bishop(PromoColor);
                             break;
                         case "Knight":
-                            Board[x2][y2].SquarePiece = new Knight(PromoColor, PieceTypeEnum.Knight);
+                            Board[x2][y2].SquarePiece = new Knight(PromoColor);
                             break;
                         default:
                             break;

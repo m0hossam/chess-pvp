@@ -75,11 +75,11 @@ namespace ChessEngine.TestModels
             }
             else
             {
-                _capturedPiece.Push(new EmptyPiece(PieceColorEnum.Empty, PieceTypeEnum.Empty));
+                _capturedPiece.Push(new EmptyPiece(PieceColorEnum.Empty));
             }
 
             _board[x2][y2].SquarePiece = _board[x1][y1].SquarePiece;
-            _board[x1][y1].SquarePiece = new EmptyPiece(PieceColorEnum.Empty, PieceTypeEnum.Empty);
+            _board[x1][y1].SquarePiece = new EmptyPiece(PieceColorEnum.Empty);
 
             switch (Type)
             {

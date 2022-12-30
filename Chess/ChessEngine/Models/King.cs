@@ -16,8 +16,9 @@ namespace ChessEngine.Models
             set { _moved = value; }
         }
 
-        public King(PieceColorEnum Color, PieceTypeEnum PieceType) : base(Color, PieceType)                
+        public King(PieceColorEnum Color) : base(Color)                
         {
+            _pieceType = PieceTypeEnum.King;
             _moved = false;
             if (_pieceColor == PieceColorEnum.White)
             {

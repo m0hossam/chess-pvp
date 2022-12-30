@@ -9,8 +9,9 @@ namespace ChessEngine.Models
 {
     public class Queen : Piece
     {
-        public Queen(PieceColorEnum Color, PieceTypeEnum PieceType) : base(Color, PieceType)                
+        public Queen(PieceColorEnum Color) : base(Color)                
         {
+            _pieceType = PieceTypeEnum.Queen;
             if (_pieceColor == PieceColorEnum.White)
             {
                 PieceImage = "/ChessEngine;component/Resources/WhiteQueen.png";

@@ -32,10 +32,9 @@ namespace ChessEngine.Models
             }
         }
 
-        public Piece(PieceColorEnum Color, PieceTypeEnum PieceType)
+        public Piece(PieceColorEnum Color)
         {
             _pieceColor = Color;
-            _pieceType = PieceType;
         }
 
         public abstract Dictionary<string,string> GenerateLegalMoves(int Turn, int CurrentX, int CurrentY, ObservableCollection<ObservableCollection<BoardSquare>> Board); 
