@@ -34,7 +34,7 @@ You can begin a new game using the New Game button on the right of the board.
 
 # Project Specifications
 
-The project was done in .NET Framework 4.5.2 using the Windows Presentation Foundation (WPF) Application template.
+The project was originally built in .NET 4.5.2, then updated in 11/2023 to .NET 4.8, using the Windows Presentation Foundation (WPF) Application template.
 The architectural pattern followed was the Model-View-ViewModel (MVVM) pattern, where the solution has 2 projects, one UI project that contains the XAML files, and one Engine project that contains the Models and ViewModels.
 
 ## Unit Testing
