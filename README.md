@@ -63,11 +63,14 @@ For efficient Chess engine implementations, check out [Chessprogramming wiki](ht
 - C# & WPF Basics
 - Chess Engines
 
-# How To Install & Run
+# How To Play
 
-You need to install .NET Framework 4.5.2 for the solution to work in your IDE.
-Press the green *Code* button, click on *Download ZIP*, extract the ZIP, from VS open the *Chess.sln* file.
-Currently, there is no *.exe* release, but I will deploy one in a future update.
+- Open the [Releases](https://github.com/m0hossam/chess-pvp/releases/) page
+- Download **Chess.rar** from the Assets of the latest release
+- Extract **Chess.rar**
+- Grab a friend
+- Open **Chess.exe**
+- Enjoy :)
 
 # Credits
 
