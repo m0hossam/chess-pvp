@@ -4,11 +4,11 @@ A simple Chess Engine that allows you to play Chess against your friends on the 
 
 ## Table Of Contents
 
-- [Chess Engine Features](https://github.com/m0hossam/chess-pvp#chess-engine-features)
-- [Project Specifications](https://github.com/m0hossam/chess-pvp#project-specifications)
-- [What I Learned](https://github.com/m0hossam/chess-pvp#what-i-learned)
-- [How To Install & Run](https://github.com/m0hossam/chess-pvp#how-to-install--run)
-- [Credits](https://github.com/m0hossam/chess-pvp#credits)
+- [Chess Engine Features](#chess-engine-features)
+- [Project Specifications](#project-specifications)
+- [What I Learned](#what-i-learned)
+- [How To Install & Run](#how-to-install--run)
+- [Credits](#credits)
 
 # Chess Engine Features
 
