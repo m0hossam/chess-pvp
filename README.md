@@ -7,7 +7,7 @@ A simple Chess Engine that allows you to play Chess against your friends on the 
 - [Chess Engine Features](#chess-engine-features)
 - [Project Specifications](#project-specifications)
 - [What I Learned](#what-i-learned)
-- [How To Install & Run](#how-to-install--run)
+- [How To Play](#how-to-play)
 - [Credits](#credits)
 
 # Chess Engine Features
