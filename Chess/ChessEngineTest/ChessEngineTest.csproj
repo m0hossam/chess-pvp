@@ -56,12 +56,6 @@
     <Compile Include="MoveGeneratorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ChessEngine\ChessEngine.csproj">
-      <Project>{dbfb0f51-c370-4c71-b9f5-fc6c0f85680e}</Project>
-      <Name>ChessEngine</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
