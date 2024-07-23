@@ -9,12 +9,43 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Pieces\BlackBishop.png" />
+    <None Remove="Resources\Pieces\BlackKing.png" />
+    <None Remove="Resources\Pieces\BlackKnight.png" />
+    <None Remove="Resources\Pieces\BlackPawn.png" />
+    <None Remove="Resources\Pieces\BlackQueen.png" />
+    <None Remove="Resources\Pieces\BlackRook.png" />
+    <None Remove="Resources\Pieces\Check.png" />
+    <None Remove="Resources\Pieces\WhiteBishop.png" />
+    <None Remove="Resources\Pieces\WhiteKing.png" />
+    <None Remove="Resources\Pieces\WhiteKnight.png" />
+    <None Remove="Resources\Pieces\WhitePawn.png" />
+    <None Remove="Resources\Pieces\WhiteQueen.png" />
+    <None Remove="Resources\Pieces\WhiteRook.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Pieces\BlackBishop.png" />
+    <Resource Include="Resources\Pieces\BlackKing.png" />
+    <Resource Include="Resources\Pieces\BlackKnight.png" />
+    <Resource Include="Resources\Pieces\BlackPawn.png" />
+    <Resource Include="Resources\Pieces\BlackQueen.png" />
+    <Resource Include="Resources\Pieces\BlackRook.png" />
+    <Resource Include="Resources\Pieces\Check.png" />
+    <Resource Include="Resources\Pieces\WhiteBishop.png" />
+    <Resource Include="Resources\Pieces\WhiteKing.png" />
+    <Resource Include="Resources\Pieces\WhiteKnight.png" />
+    <Resource Include="Resources\Pieces\WhitePawn.png" />
+    <Resource Include="Resources\Pieces\WhiteQueen.png" />
+    <Resource Include="Resources\Pieces\WhiteRook.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Views\" />
   </ItemGroup>
 
 </Project>
