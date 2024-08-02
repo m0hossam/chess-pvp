@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessApp", "ChessApp\ChessApp.csproj", "{11E2969C-B2C8-44D6-843F-74F827890099}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChessApp", "ChessApp\ChessApp.csproj", "{11E2969C-B2C8-44D6-843F-74F827890099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelsUnitTest", "ModelsUnitTest\ModelsUnitTest.csproj", "{7B81051B-171C-4060-BB20-91F377100002}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{11E2969C-B2C8-44D6-843F-74F827890099}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11E2969C-B2C8-44D6-843F-74F827890099}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11E2969C-B2C8-44D6-843F-74F827890099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B81051B-171C-4060-BB20-91F377100002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B81051B-171C-4060-BB20-91F377100002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B81051B-171C-4060-BB20-91F377100002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B81051B-171C-4060-BB20-91F377100002}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
