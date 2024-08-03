@@ -8,9 +8,15 @@ namespace ChessApp.Models
 {
     public static class BitboardHelper
     {
-        public static bool GetBit(ulong bitboard, int index)
+        public static int GetBit(ulong bitboard, int index)
         {
-            return (bitboard & ((ulong)1 << index)) != 0;
+            return (bitboard & ((ulong)1 << index)) != 0 ? 1 : 0;
+        }
+
+        public static int GetBit(ulong bitboard, int rank, int file)
+        {
+            int index = GetBitIndex(rank, file);
+            return (bitboard & ((ulong)1 << index)) != 0 ? 1 : 0;
         }
 
         public static void SetBit(ref ulong bitboard, int index)
@@ -18,8 +24,20 @@ namespace ChessApp.Models
             bitboard |= ((ulong)1 << index);
         }
 
+        public static void SetBit(ref ulong bitboard, int rank, int file)
+        {
+            int index = GetBitIndex(rank, file);
+            bitboard |= ((ulong)1 << index);
+        }
+
         public static void ClearBit(ref ulong bitboard, int index)
         {
+            bitboard &= ~((ulong)1 << index);
+        }
+
+        public static void ClearBit(ref ulong bitboard, int rank, int file)
+        {
+            int index = GetBitIndex(rank, file);
             bitboard &= ~((ulong)1 << index);
         }
 

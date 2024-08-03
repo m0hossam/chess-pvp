@@ -6,17 +6,20 @@ namespace ModelsUnitTest
     {
         static void Main(string[] args)
         {
-            string pieceChars = "PNBRQKpnbrqk";
-            Dictionary<char, PieceType> charPieceType = new Dictionary<char, PieceType>();
-            Dictionary<char, PieceColor> charPieceColor = new Dictionary<char, PieceColor>();
-            for (int i = 0; i < pieceChars.Length; i++)
+            ulong[] bitboards = new ulong[12];
+            string piecePlacement = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR";
+            FenParser.SetupPieces(piecePlacement, bitboards);
+            for (int i = 0; i < bitboards.Length; i++)
             {
-                charPieceType[pieceChars[i]] = (PieceType)(i % 6);
-                charPieceColor[pieceChars[i]] = (PieceColor)(i / 6);
-            }
-            for (int i = 0; i < pieceChars.Length; i++)
-            {
-                Console.WriteLine(pieceChars[i] + " -> " + charPieceColor[pieceChars[i]] + " " + charPieceType[pieceChars[i]]);
+                Console.WriteLine($"{(PieceColor)(i / 6)} {(PieceType)(i % 6)} Bitboard");
+                for (int rank = 7; rank >= 0; rank--)
+                {
+                    for (int file = 0; file < 8; file++)
+                    {
+                        Console.Write(BitboardHelper.GetBit(bitboards[i], rank, file));
+                    }
+                    Console.WriteLine();
+                }
             }
         }
     }
