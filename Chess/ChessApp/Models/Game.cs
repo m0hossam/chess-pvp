@@ -8,7 +8,9 @@ namespace ChessApp.Models
 {
     public class Game
     {
-        public readonly Board Board;
+        public string StartingFen;
+        public Board Board;
+        public GameState State;
         public int SideToMove;
         public int HalfMoveClock;
         public int FullMoveCounter;
